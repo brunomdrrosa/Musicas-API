@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Size;
 
 public class MusicasDTO {
 
-    private Long id;
+    private Integer id;
 
     @NotNull
     @Size(max = 255)
@@ -22,11 +22,11 @@ public class MusicasDTO {
     @Size(max = 255)
     private String album;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(final Long id) {
+    public void setId(final Integer id) {
         this.id = id;
     }
 

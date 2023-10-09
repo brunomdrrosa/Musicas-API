@@ -14,7 +14,7 @@ public class Musicas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false)
     private String titulo;
@@ -28,11 +28,11 @@ public class Musicas {
     @Column
     private String album;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(final Long id) {
+    public void setId(final Integer id) {
         this.id = id;
     }
 
