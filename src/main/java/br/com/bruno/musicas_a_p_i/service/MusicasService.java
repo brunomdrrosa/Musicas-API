@@ -25,26 +25,26 @@ public class MusicasService {
                 .toList();
     }
 
-    public MusicasDTO get(final Long id) {
+    public MusicasDTO get(final Integer id) {
         return musicasRepository.findById(id)
                 .map(musicas -> mapToDTO(musicas, new MusicasDTO()))
                 .orElseThrow(NotFoundException::new);
     }
 
-    public Long create(final MusicasDTO musicasDTO) {
+    public Integer create(final MusicasDTO musicasDTO) {
         final Musicas musicas = new Musicas();
         mapToEntity(musicasDTO, musicas);
         return musicasRepository.save(musicas).getId();
     }
 
-    public void update(final Long id, final MusicasDTO musicasDTO) {
+    public void update(final Integer id, final MusicasDTO musicasDTO) {
         final Musicas musicas = musicasRepository.findById(id)
                 .orElseThrow(NotFoundException::new);
         mapToEntity(musicasDTO, musicas);
         musicasRepository.save(musicas);
     }
 
-    public void delete(final Long id) {
+    public void delete(final Integer id) {
         musicasRepository.deleteById(id);
     }
 

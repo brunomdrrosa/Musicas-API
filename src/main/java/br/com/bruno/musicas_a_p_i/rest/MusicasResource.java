@@ -34,19 +34,19 @@ public class MusicasResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<MusicasDTO> getMusicas(@PathVariable(name = "id") final Long id) {
+    public ResponseEntity<MusicasDTO> getMusicas(@PathVariable(name = "id") final Integer id) {
         return ResponseEntity.ok(musicasService.get(id));
     }
 
     @PostMapping
     @ApiResponse(responseCode = "201")
-    public ResponseEntity<Long> createMusicas(@RequestBody @Valid final MusicasDTO musicasDTO) {
-        final Long createdId = musicasService.create(musicasDTO);
+    public ResponseEntity<Integer> createMusicas(@RequestBody @Valid final MusicasDTO musicasDTO) {
+        final Integer createdId = musicasService.create(musicasDTO);
         return new ResponseEntity<>(createdId, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Long> updateMusicas(@PathVariable(name = "id") final Long id,
+    public ResponseEntity<Integer> updateMusicas(@PathVariable(name = "id") final Integer id,
             @RequestBody @Valid final MusicasDTO musicasDTO) {
         musicasService.update(id, musicasDTO);
         return ResponseEntity.ok(id);
@@ -54,7 +54,7 @@ public class MusicasResource {
 
     @DeleteMapping("/{id}")
     @ApiResponse(responseCode = "204")
-    public ResponseEntity<Void> deleteMusicas(@PathVariable(name = "id") final Long id) {
+    public ResponseEntity<Void> deleteMusicas(@PathVariable(name = "id") final Integer id) {
         musicasService.delete(id);
         return ResponseEntity.noContent().build();
     }
