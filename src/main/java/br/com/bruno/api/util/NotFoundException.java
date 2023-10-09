@@ -1,4 +1,4 @@
-package br.com.bruno.musicas.util;
+package br.com.bruno.api.util;
 
 
 public class NotFoundException extends RuntimeException {

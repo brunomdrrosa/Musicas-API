@@ -30,7 +30,7 @@ dependencies {
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "br.com.bruno.musicas_a_p_i.MusicasAPIApplication"
+        attributes["Main-Class"] = "br.com.bruno.api.MusicasAPIApplication"
     }
 }
 

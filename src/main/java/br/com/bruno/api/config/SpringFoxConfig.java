@@ -1,4 +1,4 @@
-package br.com.bruno.musicas.config;
+package br.com.bruno.api.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package br.com.bruno.musicas;
+package br.com.bruno.api;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.servers.Server;

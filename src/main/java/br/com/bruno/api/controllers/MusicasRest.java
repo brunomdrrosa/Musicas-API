@@ -1,11 +1,12 @@
-package br.com.bruno.musicas.controller;
+package br.com.bruno.api.controllers;
 
-import br.com.bruno.musicas.model.MusicasDTO;
-import br.com.bruno.musicas.service.MusicasService;
+import br.com.bruno.api.model.MusicasDTO;
+import br.com.bruno.api.service.MusicasService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

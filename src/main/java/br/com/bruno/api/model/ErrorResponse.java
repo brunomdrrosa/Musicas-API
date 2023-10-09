@@ -1,4 +1,4 @@
-package br.com.bruno.musicas.model;
+package br.com.bruno.api.model;
 
 import java.util.List;
 

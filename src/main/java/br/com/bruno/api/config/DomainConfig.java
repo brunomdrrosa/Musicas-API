@@ -1,4 +1,4 @@
-package br.com.bruno.musicas.config;
+package br.com.bruno.api.config;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Configuration;
@@ -7,8 +7,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @Configuration
-@EntityScan("br.com.bruno.musicas_a_p_i.domain")
-@EnableJpaRepositories("br.com.bruno.musicas.repos")
+@EntityScan("br.com.bruno.api.domain")
+@EnableJpaRepositories("br.com.bruno.api.repos")
 @EnableTransactionManagement
 public class DomainConfig {
 }
