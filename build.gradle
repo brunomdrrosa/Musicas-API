@@ -28,6 +28,12 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "br.com.bruno.musicas_a_p_i.MusicasAPIApplication"
+    }
+}
+
 tasks.withType(Test) {
     useJUnitPlatform()
 }
