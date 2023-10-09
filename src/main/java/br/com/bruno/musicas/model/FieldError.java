@@ -1,4 +1,4 @@
-package br.com.bruno.musicas_a_p_i.model;
+package br.com.bruno.musicas.model;
 
 
 public class FieldError {

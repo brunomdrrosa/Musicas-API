@@ -1,6 +1,6 @@
-package br.com.bruno.musicas_a_p_i.repos;
+package br.com.bruno.musicas.repos;
 
-import br.com.bruno.musicas_a_p_i.domain.Musicas;
+import br.com.bruno.musicas.domain.Musicas;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

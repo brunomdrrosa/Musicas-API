@@ -1,25 +1,30 @@
-package br.com.bruno.musicas_a_p_i.model;
+package br.com.bruno.musicas.domain;
 
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 
-public class MusicasDTO {
+@Entity
+public class Musicas {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
 
-    @NotNull
-    @Size(max = 255)
+    @Column(nullable = false)
     private String titulo;
 
-    @NotNull
-    @Size(max = 255)
+    @Column(nullable = false)
     private String artista;
 
-    @NotNull
+    @Column(nullable = false)
     private Integer duracao;
 
-    @Size(max = 255)
+    @Column
     private String album;
 
     public Integer getId() {

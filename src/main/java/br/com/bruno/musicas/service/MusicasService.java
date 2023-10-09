@@ -1,9 +1,9 @@
-package br.com.bruno.musicas_a_p_i.service;
+package br.com.bruno.musicas.service;
 
-import br.com.bruno.musicas_a_p_i.domain.Musicas;
-import br.com.bruno.musicas_a_p_i.model.MusicasDTO;
-import br.com.bruno.musicas_a_p_i.repos.MusicasRepository;
-import br.com.bruno.musicas_a_p_i.util.NotFoundException;
+import br.com.bruno.musicas.domain.Musicas;
+import br.com.bruno.musicas.model.MusicasDTO;
+import br.com.bruno.musicas.repos.MusicasRepository;
+import br.com.bruno.musicas.util.NotFoundException;
 import java.util.List;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;

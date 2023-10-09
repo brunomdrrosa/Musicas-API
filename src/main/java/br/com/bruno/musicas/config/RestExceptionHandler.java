@@ -1,8 +1,8 @@
-package br.com.bruno.musicas_a_p_i.config;
+package br.com.bruno.musicas.config;
 
-import br.com.bruno.musicas_a_p_i.model.ErrorResponse;
-import br.com.bruno.musicas_a_p_i.model.FieldError;
-import br.com.bruno.musicas_a_p_i.util.NotFoundException;
+import br.com.bruno.musicas.model.ErrorResponse;
+import br.com.bruno.musicas.model.FieldError;
+import br.com.bruno.musicas.util.NotFoundException;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import java.util.List;
 import org.springframework.http.HttpStatus;

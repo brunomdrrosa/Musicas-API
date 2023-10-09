@@ -1,7 +1,8 @@
-package br.com.bruno.musicas_a_p_i.rest;
+package br.com.bruno.musicas.controller;
 
-import br.com.bruno.musicas_a_p_i.model.MusicasDTO;
-import br.com.bruno.musicas_a_p_i.service.MusicasService;
+import br.com.bruno.musicas.model.MusicasDTO;
+import br.com.bruno.musicas.service.MusicasService;
+import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import java.util.List;
@@ -19,24 +20,27 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/api/musicas", produces = MediaType.APPLICATION_JSON_VALUE)
-public class MusicasResource {
+public class MusicasRest {
 
     private final MusicasService musicasService;
 
-    public MusicasResource(final MusicasService musicasService) {
+    public MusicasRest(final MusicasService musicasService) {
         this.musicasService = musicasService;
     }
 
+    @ApiOperation(value= "Buscar todas as músicas disponíveis no sistema.")
     @GetMapping
-    public ResponseEntity<List<MusicasDTO>> getAllMusicass() {
+    public ResponseEntity<List<MusicasDTO>> getAllMusicas() {
         return ResponseEntity.ok(musicasService.findAll());
     }
 
+    @ApiOperation(value= "Buscar uma música por ID.")
     @GetMapping("/{id}")
     public ResponseEntity<MusicasDTO> getMusicas(@PathVariable(name = "id") final Integer id) {
         return ResponseEntity.ok(musicasService.get(id));
     }
 
+    @ApiOperation(value= "Adicionar uma nova música no sistema.")
     @PostMapping
     @ApiResponse(responseCode = "201")
     public ResponseEntity<Integer> createMusicas(@RequestBody @Valid final MusicasDTO musicasDTO) {
@@ -44,6 +48,7 @@ public class MusicasResource {
         return new ResponseEntity<>(createdId, HttpStatus.CREATED);
     }
 
+    @ApiOperation(value= "Atualizar uma música do sistema.")
     @PutMapping("/{id}")
     public ResponseEntity<Integer> updateMusicas(@PathVariable(name = "id") final Integer id,
             @RequestBody @Valid final MusicasDTO musicasDTO) {
@@ -51,6 +56,7 @@ public class MusicasResource {
         return ResponseEntity.ok(id);
     }
 
+    @ApiOperation(value= "Remover uma música do sistema.")
     @DeleteMapping("/{id}")
     @ApiResponse(responseCode = "204")
     public ResponseEntity<Void> deleteMusicas(@PathVariable(name = "id") final Integer id) {

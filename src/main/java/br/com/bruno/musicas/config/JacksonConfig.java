@@ -1,4 +1,4 @@
-package br.com.bruno.musicas_a_p_i.config;
+package br.com.bruno.musicas.config;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.SerializationFeature;
